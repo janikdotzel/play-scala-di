@@ -1,9 +1,12 @@
 package controllers.production
 
-import com.google.inject.AbstractModule
 import controllers.Service
+import play.api.{Configuration, Environment}
+import play.api.inject.{Binding, Module}
 
-class ProductionModule extends AbstractModule {
+class ProductionModule extends Module {
 
-  override def configure(): Unit = bind(classOf[Service]).to(classOf[ServiceImplProduction])
+  override def bindings(environment: Environment, configuration: Configuration) = Seq(
+    bind[Service].to(classOf[ServiceImplProduction])
+  )
 }

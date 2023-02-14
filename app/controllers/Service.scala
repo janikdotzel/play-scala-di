@@ -1,5 +1,5 @@
 package controllers
 
 trait Service {
-  def externalCall(): Unit
+  def externalCall: String
 }
