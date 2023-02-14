@@ -19,17 +19,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    callToServiceA("parameterA")
-    callToServiceB("parameterB")
-
     Ok(views.html.index())
   }
-
-  private def callToServiceA(parameter: String) = println("Calling Service A with: " + parameter)
-  private def callToServiceB(parameter: String) =
-    println("Calling Service B with: " + parameter)
-    callToServiceC("parameterC")
-  private def callToServiceC(parameter: String) = println("Calling Service C with: " + parameter)
-
-
 }
