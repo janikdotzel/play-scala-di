@@ -4,7 +4,6 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
 GET     /demo                       controllers.DemoController.demo()
 
 # Map static resources from the /public folder to the /assets URL path
