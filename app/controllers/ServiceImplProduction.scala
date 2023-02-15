@@ -1,8 +1,5 @@
-package controllers.production
-
-import controllers.Service
+package controllers
 
 class ServiceImplProduction() extends Service {
-
   override def externalCall: String = "Production implementation"
 }

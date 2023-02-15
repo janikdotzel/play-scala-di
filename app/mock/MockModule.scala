@@ -1,4 +1,4 @@
-package controllers.mock
+package mock
 
 import com.google.inject.AbstractModule
 import controllers.Service
